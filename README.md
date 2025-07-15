@@ -1,7 +1,7 @@
 # Documents to Markdown Converter Server
 
 > [!IMPORTANT]
-> This backend server is a robust, scalable solution for effortlessly converting a wide range of document formats—including PDF, DOCX, PPTX, CSV, HTML, JPG, PNG, TIFF, BMP, AsciiDoc, and Markdown—into Markdown. Powered by [Docling](https://github.com/DS4SD/docling) (IBM's advanced document parser), this service is built with FastAPI, Celery, and Redis, ensuring fast, efficient processing. Optimized for both CPU and GPU modes, with GPU highly recommended for production environments, this solution offers high performance and flexibility, making it ideal for handling complex document processing at scale.
+> This backend server is a robust, scalable solution for effortlessly converting a wide range of document formats—including PDF, DOCX, PPTX, XLSX, CSV, HTML/XHTML, JPG, PNG, TIFF, BMP, AsciiDoc, and Markdown—into Markdown. Powered by [Docling](https://github.com/DS4SD/docling) (IBM's advanced document parser), this service is built with FastAPI, Celery, and Redis, ensuring fast, efficient processing. Optimized for both CPU and GPU modes, with GPU highly recommended for production environments, this solution offers high performance and flexibility, making it ideal for handling complex document processing at scale.
 
 ## Comparison to Other Parsing Libraries
 
@@ -22,6 +22,7 @@
   - PDF files
   - Microsoft Word documents (DOCX)
   - PowerPoint presentations (PPTX)
+  - Excel spreadsheets (XLSX)
   - HTML files
   - Images (JPG, PNG, TIFF, BMP)
   - AsciiDoc files
