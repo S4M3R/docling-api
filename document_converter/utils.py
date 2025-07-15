@@ -9,6 +9,7 @@ import filetype
 class InputFormat(str, Enum):
     DOCX = "docx"
     PPTX = "pptx"
+    XLSX = "xlsx"
     HTML = "html"
     IMAGE = "image"
     PDF = "pdf"
@@ -27,6 +28,7 @@ class OutputFormat(str, Enum):
 FormatToExtensions: Dict[InputFormat, List[str]] = {
     InputFormat.DOCX: ["docx", "dotx", "docm", "dotm"],
     InputFormat.PPTX: ["pptx", "potx", "ppsx", "pptm", "potm", "ppsm"],
+    InputFormat.XLSX: ["xlsx", "xlsm", "xltx", "xltm"],
     InputFormat.PDF: ["pdf"],
     InputFormat.MD: ["md"],
     InputFormat.HTML: ["html", "htm", "xhtml"],
@@ -44,6 +46,10 @@ FormatToMimeType: Dict[InputFormat, List[str]] = {
         "application/vnd.openxmlformats-officedocument.presentationml.template",
         "application/vnd.openxmlformats-officedocument.presentationml.slideshow",
         "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ],
+    InputFormat.XLSX: [
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.template",
     ],
     InputFormat.HTML: ["text/html", "application/xhtml+xml"],
     InputFormat.IMAGE: [
@@ -129,6 +135,8 @@ def mime_from_extension(ext):
         mime = FormatToMimeType[InputFormat.MD][0]
     elif ext in FormatToExtensions[InputFormat.CSV]:
         mime = FormatToMimeType[InputFormat.CSV][0]
+    elif ext in FormatToExtensions[InputFormat.XLSX]:
+        mime = FormatToMimeType[InputFormat.XLSX][0]
 
     return mime
 
