@@ -23,7 +23,7 @@
   - Microsoft Word documents (DOCX)
   - PowerPoint presentations (PPTX)
   - Excel spreadsheets (XLSX)
-  - HTML files
+  - HTML and XHTML files
   - Images (JPG, PNG, TIFF, BMP)
   - AsciiDoc files
   - Markdown files
